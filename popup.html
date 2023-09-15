@@ -1,0 +1,41 @@
+<!-- Copyright 2017 The Chromium Authors. All rights reserved.
+Use of this source code is governed by a BSD-style license that can be
+found in the LICENSE file. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Posture Popup</title>
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #SpineImage {
+        width: 100px;
+        margin: 5px;
+      }
+
+      button {
+        margin: 5px;
+        outline: none;
+      }
+
+      button:hover {
+        outline: #80deea dotted thick;
+      }
+    </style>
+    
+  </head>
+  <body>
+    <img src="./spine128.png" id="SpineImage" />   
+    <label for="mySlider">Select a delay range:</label>
+<input type="range" id="mySlider" name="slider" min="1" max="60" step="1">
+<p id="sliderValue">Value: <span id="sliderOutput">30</span></p>
+    <button id="activate">Activate</button>
+    <button id="cancelAlarm">Cancel</button>
+    <script src="popup.js"></script>
+  </body>
+</html>
+
+
+<!-- Designed by Freepik: "https://www.freepik.com/icon/spine_3999850" -->

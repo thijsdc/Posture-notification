@@ -1,0 +1,24 @@
+{
+  "name": "Correct Posture Event Popup",
+  "description": "Reminds the user at random intervals to correct their posture",
+  "version": "1.0",
+  "manifest_version": 3,
+  "permissions": ["alarms", "notifications", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Correct Posture Event",
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "spine16.png",
+    "32": "spine32.png",
+    "48": "spine64.png",
+    "128": "spine128.png"
+  }
+}
+
+
+
+
