@@ -1,40 +1,25 @@
-<!-- Copyright 2017 The Chromium Authors. All rights reserved.
-Use of this source code is governed by a BSD-style license that can be
-found in the LICENSE file. -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Posture Popup</title>
-    <style>
-      body {
-        text-align: center;
-      }
 
-      #SpineImage {
-        width: 100px;
-        margin: 5px;
-      }
+<head>
+  <script src="popup.js" defer></script>
+  <stylesheet href="popup.css" defer></stylesheet>
+  <title>Posture Popup</title>
 
-      button {
-        margin: 5px;
-        outline: none;
-      }
+</head>
 
-      button:hover {
-        outline: #80deea dotted thick;
-      }
-    </style>
-    
-  </head>
-  <body>
-    <img src="./spine128.png" id="SpineImage" />   
-    <label for="mySlider">Select a delay range:</label>
-<input type="range" id="mySlider" name="slider" min="1" max="60" step="1">
-<p id="sliderValue">Value: <span id="sliderOutput">30</span></p>
-    <button id="activate">Activate</button>
-    <button id="cancelAlarm">Cancel</button>
-    <script src="popup.js"></script>
-  </body>
+<body>
+  <img src="./spine64.png" id="SpineImage" />
+  <div id="slider">
+    <label for="mySlider">Remind me in:</label>
+    <input type="range" id="mySlider" name="slider" min="5" max="90" step="1">
+    <p id="sliderValue">Minutes: <span id="sliderOutput">30</span></p>
+  </div>
+  
+  <button id="activate">Activate</button>
+  <button id="cancelAlarm">Cancel</button>
+  
+</body>
 </html>
 
 

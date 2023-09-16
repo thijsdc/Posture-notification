@@ -1,21 +1,20 @@
 'use strict';
 
-function getRandomNumber(min, max) {
-  const randomDecimal = Math.random();
-  const randomInRange = randomDecimal * (max - min) + min;
-  const randomInteger = Math.floor(randomInRange);
-  return randomInteger;
-}
+// function getRandomNumber(min, max) {
+//   const randomDecimal = Math.random();
+//   const randomInRange = randomDecimal * (max - min) + min;
+//   const randomInteger = Math.floor(randomInRange);
+//   return randomInteger;
+// }
 
 function setAlarm(event) {
  
   const slider = document.getElementById("mySlider");
-  const minValue = parseFloat(slider.value);
-  const minutes = getRandomNumber(minValue, 60);
+  const minutes = parseFloat(slider.value);
   console.log(`Next alarm is in ${minutes}`);
   chrome.action.setBadgeText({ text: 'ON' });
-  chrome.alarms.create({ delayInMinutes: minutes });
-  chrome.storage.sync.set({ min: minValue });  
+  chrome.alarms.create({ periodInMinutes: minutes });
+  chrome.storage.sync.set({ min: minutes });  
 }
 
 function clearAlarm() {
