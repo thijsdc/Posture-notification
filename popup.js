@@ -1,12 +1,5 @@
 'use strict';
 
-// function getRandomNumber(min, max) {
-//   const randomDecimal = Math.random();
-//   const randomInRange = randomDecimal * (max - min) + min;
-//   const randomInteger = Math.floor(randomInRange);
-//   return randomInteger;
-// }
-
 function setAlarm(event) {
  
   const slider = document.getElementById("mySlider");

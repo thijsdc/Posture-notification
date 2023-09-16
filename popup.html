@@ -3,21 +3,49 @@
 
 <head>
   <script src="popup.js" defer></script>
-  <stylesheet href="popup.css" defer></stylesheet>
   <title>Posture Popup</title>
+  <style>
+    body {
+    
+    text-align: center;
+  }
+
+  #SpineImage {        
+    width: 100px;
+    margin: 5px;
+  }
+
+  button {
+    margin: 5px;
+    outline: none;
+  }
+
+  button:hover {
+    outline: #80deea solid thin;
+  }
+
+  #slider {
+    padding: 10px;
+  }
+  </style>
 
 </head>
 
 <body>
-  <img src="./spine64.png" id="SpineImage" />
+  <img src="./spine128.png" id="SpineImage" />
+
   <div id="slider">
     <label for="mySlider">Remind me in:</label>
     <input type="range" id="mySlider" name="slider" min="5" max="90" step="1">
     <p id="sliderValue">Minutes: <span id="sliderOutput">30</span></p>
   </div>
+
+  <div>
+    <button id="activate">Activate</button>
+    <button id="cancelAlarm">Cancel</button>
+  </div>
   
-  <button id="activate">Activate</button>
-  <button id="cancelAlarm">Cancel</button>
+
   
 </body>
 </html>
